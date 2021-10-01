@@ -19,7 +19,7 @@ function Statistics({ title, stats }) {
     </section>
   );
 }
-Statistics.protoTypes = {
+Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.arrayOf({
     id: PropTypes.string.isRequired,

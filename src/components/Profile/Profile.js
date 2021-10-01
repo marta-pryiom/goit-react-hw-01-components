@@ -35,7 +35,7 @@ function Profile({
     </div>
   );
 }
-Profile.protoTypes = {
+Profile.propTypes = {
   name: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,

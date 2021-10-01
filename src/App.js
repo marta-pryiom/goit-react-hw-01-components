@@ -1,9 +1,12 @@
 import React from 'react';
 import './App.css';
 import Profile from './components/Profile/Profile';
+import Statistics from './components/Statistics/Statistics';
+import FriendsList from './components/FriendList/FriendList';
 import user from './all.json/user.json';
 import statisticalData from './all.json/statistical-data.json';
-import Statistics from './components/Statistics/Statistics';
+import friends from './all.json/friends.json';
+
 // import ColorPicker from './components/ColorPicker/ColorPicker'
 // import Alert from './components/Alert/Alert';
 // import Container from "./components/Container/Container"
@@ -19,7 +22,9 @@ function App() {
         stats={user.stats}
       />
       <Statistics title="Upload stats" stats={statisticalData} />;
-      <Statistics stats={statisticalData} />;{/* <Container> */}
+      <Statistics stats={statisticalData} />;
+      <FriendsList friends={friends} />
+      {/* <Container> */}
       {/* /* <ColorPicker options = {colorPickerOptions}/> */}
       {/* <Alert text="В тебе все вийде!!!!" type='error'/>
       <Alert text="В тебе все вийде!!!!" type='success'/>
