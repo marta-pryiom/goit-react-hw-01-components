@@ -58,13 +58,13 @@ li {
 li:hover {
   color: red;
 }
+.quantity {
+  font-weight: 500;
+  color: rgb(52, 52, 163);
+}
 .label {
   display: block;
   font-size: 25px;
   font-weight: 500;
   margin-bottom: 10px;
-}
-.quantity {
-  font-weight: 500;
-  color: rgb(52, 52, 163);
 }
