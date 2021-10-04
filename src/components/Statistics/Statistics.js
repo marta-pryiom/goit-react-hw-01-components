@@ -3,6 +3,7 @@ import s from './Statistics.module.css';
 console.log(s);
 
 function Statistics({ title, stats }) {
+  console.log(stats.id);
   return (
     <section className={s.statistics}>
       {title && <h2 className={s.title}>{title}</h2>}
@@ -21,11 +22,13 @@ function Statistics({ title, stats }) {
 }
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.arrayOf({
-    id: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
-    percentage: PropTypes.number.isRequired,
-  }),
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
 };
 
 export default Statistics;

@@ -3,7 +3,7 @@ import s from './TransactionHistory.module.css';
 
 function TransactionHistory({ items }) {
   return (
-    <table class={s.transactionHistory}>
+    <table className={s.transactionHistory}>
       <thead>
         <tr>
           <th>Type</th>
@@ -25,9 +25,13 @@ function TransactionHistory({ items }) {
   );
 }
 TransactionHistory.propTypes = {
-  id: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  amount: PropTypes.string.isRequired,
-  currency: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ),
 };
 export default TransactionHistory;
